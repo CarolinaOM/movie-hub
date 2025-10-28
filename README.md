@@ -36,4 +36,4 @@ Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes 
 # git clone [URL_DE_TU_REPOSITORIO]
 # cd movie-
 
-(public/images/screenshot_cartelera.png)
+![Captura de la Cartelera General de MovieHub](public/images/screenshot_cartelera.png)
