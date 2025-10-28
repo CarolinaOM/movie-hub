@@ -1,73 +1,37 @@
-# React + TypeScript + Vite
+# 🎬 MovieHub - Cartelera de Cine y Simulación de Venta de Boletos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web de simulación de cartelera de cine construida con React, TypeScript y Tailwind CSS, con un diseño moderno, oscuro y acentos en Ámbar Dorado. Muestra películas populares y una cartelera completa con horarios de función.
 
-Currently, two official plugins are available:
+## ✨ Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Diseño Responsivo:** Visualización optimizada para dispositivos móviles y de escritorio.
+* **Página de Inicio (Home):** Destaca una película principal (Hero Section) y las tres películas más populares de la cartelera actual.
+* **Cartelera General:** Muestra el catálogo completo de películas (7+) con sus respectivos pósteres.
+* **Simulación de Compra:** Las tarjetas de la cartelera incluyen **botones de horarios** que simulan el proceso de compra de boletos mediante una alerta.
+* **Página de Detalle:** Muestra la sinopsis, puntuación, director, duración y un **tráiler de YouTube** integrado para cada película.
+* **Navegación:** Header y Footer completos para una experiencia de usuario profesional.
 
-## React Compiler
+## 🛠️ Tecnologías Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Framework:** React v18+
+* **Lenguaje:** TypeScript
+* **Estilos:** Tailwind CSS (para el diseño rápido y responsivo)
+* **Navegación:** React Router DOM (para las rutas / /cartelera /movie/:id)
+* **Datos:** `dummyData.ts` (simulación de una API/base de datos local)
 
-## Expanding the ESLint configuration
+## 🚀 Instalación y Ejecución Local
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Sigue estos pasos para levantar el proyecto en tu máquina local.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerrequisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Asegúrate de tener **Node.js** y **npm** (o yarn/pnpm) instalados.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Clonar el repositorio (Opcional, si estás usando Git)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes omitir este paso, pero es la forma estándar de iniciar:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Si aún no tienes tu repositorio en GitHub, omite este paso
+# git clone [URL_DE_TU_REPOSITORIO]
+# cd movie-hub
