@@ -36,4 +36,4 @@ Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes 
 # git clone [URL_DE_TU_REPOSITORIO]
 # cd movie-
 
-![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
+(public/images/screenshot_cartelera.png)
