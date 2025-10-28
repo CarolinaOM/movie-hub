@@ -2,6 +2,8 @@
 
 Una aplicación web de simulación de cartelera de cine construida con React, TypeScript y Tailwind CSS, con un diseño moderno, oscuro y acentos en Ámbar Dorado. Muestra películas populares y una cartelera completa con horarios de función.
 
+![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
+
 ## ✨ Características Principales
 
 * **Diseño Responsivo:** Visualización optimizada para dispositivos móviles y de escritorio.
@@ -29,12 +31,9 @@ Asegúrate de tener **Node.js** y **npm** (o yarn/pnpm) instalados.
 
 ### 1. Clonar el repositorio (Opcional, si estás usando Git)
 
-![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
-
 Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes omitir este paso, pero es la forma estándar de iniciar:
 
 ```bash
 # Si aún no tienes tu repositorio en GitHub, omite este paso
 # git clone [URL_DE_TU_REPOSITORIO]
 # cd movie-
-
