@@ -1,23 +1,24 @@
+// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Home from './pages/Home';
-import MovieDetail from './pages/MovieDetail'; // Esto resuelve el error anterior.
+import MovieDetail from './pages/MovieDetail';
+import Favorites from './pages/Favorites';
+import Showcase from './pages/Showcase'; 
+import Header from './components/Header';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div className="bg-gray-900 min-h-screen">
         <Header />
-        <main className="container mx-auto p-4 pt-24">
-          
-          {/* 🌟 'Routes' ahora es reconocido */}
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cartelera" element={<Showcase />} /> 
+            <Route path="/favorites" element={<Favorites />} />
             <Route path="/movie/:id" element={<MovieDetail />} />
-            {/* ... otras rutas */}
           </Routes>
-
         </main>
       </div>
     </Router>

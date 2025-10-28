@@ -1,24 +1,35 @@
 // src/pages/Home.tsx
 import React from 'react';
-import MovieList from '../components/MovieList.tsx'; // Importación obligatoria
-// ⚠️ No importamos useFetchMovies
+import Hero from '../components/Hero'; 
+import MovieList from '../components/MovieList'; 
+import { getPopularMovies } from '../utils/dummyData'; 
 
-const Home = () => {
-  // 🔑 Datos simulados: Desactiva la carga/error
-  const popularMovies = [
-    { id: 1, title: 'Dummy 1' }, 
-    { id: 2, title: 'Dummy 2' }, 
-    { id: 3, title: 'Dummy 3' }
-  ]; 
+const Home: React.FC = () => {
+  // 🔑 1. Llamada a la función para obtener las 3 películas nuevas
+  const popularMovies = getPopularMovies();
   
-  // ⚠️ Ya no hay condicionales de isLoading o error
-
   return (
-    <div className="pt-24 pb-8"> {/* Añadimos padding para no superponer con el Header fijo */}
-      <h2 className="text-3xl font-bold mb-6 text-red-500">Películas Populares (Modo Manual)</h2>
+    <div className="bg-gray-900 min-h-screen">
       
-      {/* Muestra el componente, incluso si las películas no tienen todos los campos de 'Movie' */}
-      <MovieList movies={popularMovies} /> 
+      {/* SECCIÓN HERO (Película Destacada) */}
+      {/* No le ponemos pt- porque el Hero se encarga de la altura */}
+      <Hero /> 
+
+      {/* SECCIÓN DE CARTELERA ACTUAL (Películas Populares) */}
+      <div className="container mx-auto p-4 py-12">
+        
+        <h2 className="text-4xl font-extrabold text-amber-400 mb-8">
+          Cartelera Actual
+        </h2>
+        
+        {/* 3. Renderizado de la lista usando MovieList */}
+        {popularMovies.length > 0 ? (
+          <MovieList movies={popularMovies} />
+        ) : (
+          <p className="text-white">No hay películas populares disponibles en este momento.</p>
+        )}
+      </div>
+
     </div>
   );
 };

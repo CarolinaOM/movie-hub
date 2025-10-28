@@ -1,31 +1,53 @@
 // src/components/Header.tsx
-const Header = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-xl z-10">
-      <nav className="container mx-auto p-4 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full bg-gray-900 z-50 shadow-xl">
+      <div className="container mx-auto p-4 flex justify-between items-center">
         
-        {/* Logo/Título - Usa Tailwind Typography si lo instalaste */}
-        <h1 className="text-2xl font-bold text-red-500 tracking-wider">
+        {/* Logo/Título (MovieHub) */}
+        <Link 
+          to="/" 
+          className="text-3xl font-bold text-amber-400"
+        >
           MovieHub
-        </h1>
-        
-        {/* Navegación - Usa `Link` de react-router-dom */}
-        <div className="space-x-4">
-          <a href="/" className="text-gray-300 hover:text-red-500 transition duration-300">
-            Inicio
-          </a>
-          <a href="/favorites" className="text-gray-300 hover:text-red-500 transition duration-300">
-            Favoritos
-          </a>
-        </div>
-        
-        {/* Botón de Modo Oscuro (placeholder) */}
-        <button className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition">
-          {/* Icono de sol/luna, puedes usar una librería como react-icons */}
-          ☀️
-        </button>
-      </nav>
+        </Link>
+
+        {/* Navegación */}
+        <nav>
+          <ul className="flex space-x-6">
+            <li>
+              <Link 
+                to="/" 
+                className="text-white hover:text-amber-400 transition duration-300"
+              >
+                Inicio
+              </Link>
+            </li>
+            {/* 🔑 NUEVO ENLACE: Cartelera */}
+            <li>
+              <Link 
+                to="/cartelera" 
+                className="text-white hover:text-amber-400 transition duration-300"
+              >
+                Cartelera
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/favorites" 
+                className="text-white hover:text-amber-400 transition duration-300"
+              >
+                Favoritos
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
+
 export default Header;
