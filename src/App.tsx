@@ -1,27 +1,32 @@
 // src/App.tsx
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import MovieDetail from './pages/MovieDetail';
-import Favorites from './pages/Favorites';
-import Showcase from './pages/Showcase'; 
 import Header from './components/Header';
+import Footer from './components/Footer'; 
+import Home from './pages/Home';
+import Cartelera from './pages/Cartelera';
+import MovieDetail from './pages/MovieDetail'; 
 
-const App: React.FC = () => {
+function App() {
   return (
     <Router>
-      <div className="bg-gray-900 min-h-screen">
+      <div className="flex flex-col min-h-screen bg-gray-900">
+        
         <Header />
-        <main>
+        
+        {/* El 'flex-grow' asegura que el contenido ocupe el espacio antes del Footer */}
+        <main className="flex-grow"> 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cartelera" element={<Showcase />} /> 
-            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/cartelera" element={<Cartelera />} />
             <Route path="/movie/:id" element={<MovieDetail />} />
           </Routes>
         </main>
+        
+        <Footer />
+        
       </div>
     </Router>
   );
-};
+}
+
 export default App;
