@@ -29,6 +29,8 @@ Asegúrate de tener **Node.js** y **npm** (o yarn/pnpm) instalados.
 
 ### 1. Clonar el repositorio (Opcional, si estás usando Git)
 
+![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
+
 Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes omitir este paso, pero es la forma estándar de iniciar:
 
 ```bash
@@ -36,4 +38,3 @@ Si ya inicializaste tu repositorio con `git init` y hiciste el *commit*, puedes 
 # git clone [URL_DE_TU_REPOSITORIO]
 # cd movie-
 
-![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
