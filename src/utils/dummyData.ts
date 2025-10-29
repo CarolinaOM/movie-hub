@@ -18,7 +18,7 @@ const DUMMY_MOVIE_DETAILS = [
     director: 'James Cameron',
     writer: 'James Cameron',
     companies: '20th Century Studios',
-    showtimes: ['16:00', '18:30', '21:00'], // 🔑 Horarios
+    showtimes: ['16:00', '18:30', '21:00'], // Horarios
   },
   // PELÍCULA 2 (Supergirl: Woman of Tomorrow) - Popular
   {
@@ -36,7 +36,7 @@ const DUMMY_MOVIE_DETAILS = [
     director: 'Milly Alcock',
     writer: 'Tom King',
     companies: 'DC Studios',
-    showtimes: ['17:00', '19:30', '22:00'], // 🔑 Horarios
+    showtimes: ['17:00', '19:30', '22:00'], // Horarios
   },
   // PELÍCULA 3 (El gato con sombrero) - Popular
   {
@@ -49,14 +49,14 @@ const DUMMY_MOVIE_DETAILS = [
     release_date: '2026',
     genres: ['Animación', 'Familiar', 'Comedia'],
     poster_path: 'gato.jpg',
-    trailer_id: 'bA7SxrJx42k',
+    trailer_id: '6HRWxu2VHvA', // 🔑 ID DE YOUTUBE ACTUALIZADO
     country: 'USA',
     director: 'Alessandro Carloni',
     writer: 'Dr. Seuss',
     companies: 'Warner Bros. Pictures Animation',
-    showtimes: ['14:00', '16:30', '19:00'], // 🔑 Horarios
+    showtimes: ['14:00', '16:30', '19:00'], // Horarios
   },
-  // 🔑 NUEVA PELÍCULA 4 (Zootrópolis 2)
+  // PELÍCULA 4 (Zootrópolis 2)
   {
     id: 4,
     title: 'Zootrópolis 2',
@@ -72,9 +72,9 @@ const DUMMY_MOVIE_DETAILS = [
     director: 'Byron Howard, Jared Bush',
     writer: 'Jared Bush',
     companies: 'Walt Disney Pictures',
-    showtimes: ['14:30', '17:00', '19:30', '22:00'], // 🔑 Horarios
+    showtimes: ['14:30', '17:00', '19:30', '22:00'], // Horarios
   },
-  // 🔑 NUEVA PELÍCULA 5 (Bob Esponja: Una aventura pirata)
+  // PELÍCULA 5 (Bob Esponja: Una aventura pirata)
   {
     id: 5,
     title: 'Bob Esponja: Una aventura pirata',
@@ -90,9 +90,9 @@ const DUMMY_MOVIE_DETAILS = [
     director: 'David Duhan',
     writer: 'Kyle McCulloch',
     companies: 'Paramount Animation',
-    showtimes: ['15:00', '17:30', '20:00'], // 🔑 Horarios
+    showtimes: ['15:00', '17:30', '20:00'], // Horarios
   },
-  // 🔑 NUEVA PELÍCULA 6 (Tron: Ares)
+  // PELÍCULA 6 (Tron: Ares)
   {
     id: 6,
     title: 'Tron: Ares',
@@ -108,9 +108,9 @@ const DUMMY_MOVIE_DETAILS = [
     director: 'Joachim Rønning',
     writer: 'Jesse Wigutow',
     companies: 'Walt Disney Pictures',
-    showtimes: ['18:30', '21:00', '23:30'], // 🔑 Horarios
+    showtimes: ['18:30', '21:00', '23:30'], // Horarios
   },
-  // Película 99 (Película del Hero Section: Tom y Jerry: Forbidden Compass)
+  // Película 99 (Tom y Jerry: Forbidden Compass)
   {
     id: 99,
     title: 'Tom y Jerry: Forbidden Compass', 
@@ -121,12 +121,12 @@ const DUMMY_MOVIE_DETAILS = [
     release_date: '2025', 
     genres: ['Animación', 'Comedia', 'Fantástico', 'Viajes en el tiempo', 'Gatos', 'Roedores'], 
     poster_path: 'tomyjerry_time_adventure.jpg', 
-    trailer_id: 'p7Hru3v9NSw', 
+    trailer_id: 'Nk9BO84ZKPw', // 🔑 ID DE YOUTUBE ACTUALIZADO
     country: 'China',
     director: 'Zhang Gang',
     writer: 'Zhang Gang',
     companies: 'China Film Co. Ltd., Warner Bros. Discovery, Origin Animation.',
-    showtimes: ['12:00', '15:00', '18:00', '21:00'], // 🔑 Horarios
+    showtimes: ['12:00', '15:00', '18:00', '21:00'], // Horarios
   },
 ];
 
@@ -155,6 +155,6 @@ export const getAllMovies = () => {
         title: movie.title,
         release_date: movie.release_date,
         image: movie.poster_path, 
-        showtimes: movie.showtimes // 🔑 AÑADIDO
+        showtimes: movie.showtimes 
     }));
 };

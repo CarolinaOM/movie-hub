@@ -36,12 +36,6 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/favorites" 
-                className="text-white hover:text-amber-400 transition duration-300"
-              >
-                Favoritos
-              </Link>
             </li>
           </ul>
         </nav>
