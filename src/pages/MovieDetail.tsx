@@ -1,7 +1,6 @@
 // src/pages/MovieDetail.tsx
-import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieById } from '../utils/dummyData'; // Importamos la función de búsqueda
+import { getMovieById } from '../utils/dummyData'; 
 
 const MovieDetail = () => {
   // Obtiene el ID de la URL (ej: /movie/99)
