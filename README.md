@@ -2,6 +2,9 @@
 
 Una aplicación web de simulación de cartelera de cine construida con React, TypeScript y Tailwind CSS, con un diseño moderno, oscuro y acentos en Ámbar Dorado. Muestra películas populares y una cartelera completa con horarios de función.
 
+## 🔗 Ver Proyecto en Vivo
+**Desplegado en Netlify:** [https://movie-hub-cartelera.netlify.app/](https://movie-hub-cartelera.netlify.app/)
+
 ![Captura de pantalla de la Cartelera General](public/images/screenshot_cartelera.png)
 
 ## ✨ Características Principales
